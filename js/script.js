@@ -1,10 +1,12 @@
-let computerMove = 'kamień';
-let playerMove = 'papier';
+let roundNumber = Math.floor(Math.random() * 3 + 1);
 
-printMessage(
-  'Zagrałem ' +
-    computerMove +
-    '! Jeśli Twój ruch to ' +
-    playerMove +
-    ', to wygrywasz!'
-);
+console.log('Wylosowana liczba to:', roundNumber);
+
+let computerMove = 'nieznany ruch';
+
+if (roundNumber === 1) {
+  computerMove = 'kamień';
+}
+
+printMessage('Mój ruch to: ' + computerMove);
+
