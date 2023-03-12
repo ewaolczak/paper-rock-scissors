@@ -14,8 +14,6 @@ function clearMessages() {
   document.getElementById('messages').innerHTML = '';
 }
 
-function clearScore(computerScore, playerScore) {
+function clearScore() {
   document.getElementById('result').innerHTML = '';
-  computerScore = 0;
-  playerScore = 0;
 }
