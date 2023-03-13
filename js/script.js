@@ -12,10 +12,10 @@
     }
   };
 
-  const displayResults = function (argComputerMove, argPlayerMove) {
-    let computerScore = 0;
-    let playerScore = 0;
+  let computerScore = 0;
+  let playerScore = 0;
 
+  const displayResults = function (argComputerMove, argPlayerMove) {
     console.log('moves:', argComputerMove, argPlayerMove);
     if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
       playerScore++;
@@ -79,8 +79,12 @@
     .addEventListener('click', function () {
       playGame(3);
     });
+
   document.getElementById('reset').addEventListener('click', function () {
     clearMessages();
     clearScore();
+    computerScore = 0;
+    playerScore = 0;
+    console.log('scores:', computerScore, playerScore);
   });
 }
