@@ -80,11 +80,14 @@
       playGame(3);
     });
 
-  document.getElementById('reset').addEventListener('click', function () {
+  const resetGame = function () {
     clearMessages();
     clearScore();
     computerScore = 0;
     playerScore = 0;
     console.log('scores:', computerScore, playerScore);
+  };
+  document.getElementById('reset').addEventListener('click', function () {
+    resetGame();
   });
 }
